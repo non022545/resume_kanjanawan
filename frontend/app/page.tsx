@@ -49,7 +49,7 @@ export default function Home() {
           <a href="#profile">เกี่ยวกับฉัน</a><a href="#experience">ประสบการณ์</a>
           <a href="#education">การศึกษา</a><a href="#contact">ติดต่อ</a>
         </div>
-        <a className="nav-cta" href="mailto:Ning.gc221042@gmail.com">ร่วมงานกัน <Icon name="arrow" /></a>
+        <a className="" href="mailto:Ning.gc221042@gmail.com"> </a>
       </nav>
 
       <section className="hero" id="top">

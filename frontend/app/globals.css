@@ -234,6 +234,7 @@ svg {
 .hero-role,
 .hero-bottom > p,
 .scroll-link {
+  --reveal-y: 20px;
   opacity: 0;
 }
 
@@ -955,9 +956,10 @@ footer h2 em {
 
 .reveal {
   --reveal-x: 0px;
+  --reveal-y: 24px;
   --reveal-delay: 0ms;
   opacity: 0;
-  transform: translate3d(var(--reveal-x), 0, 0);
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
 }
 
 .reveal-left {
@@ -1004,7 +1006,7 @@ footer h2 em {
 @keyframes reveal {
   0% {
     opacity: 0;
-    transform: translate3d(var(--reveal-x), 0, 0);
+    transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
   }
 
   45% {
@@ -1182,6 +1184,10 @@ footer h2 em {
 
   .reveal-right {
     --reveal-x: 22px;
+  }
+
+  .reveal {
+    --reveal-y: 16px;
   }
 
   html {

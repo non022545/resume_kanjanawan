@@ -1,4 +1,5 @@
 import Image from "next/image";
+import RevealOnScroll from "./reveal-on-scroll";
 
 const Icon = ({ name }: { name: "phone" | "mail" | "pin" | "arrow" }) => {
   const paths = {
@@ -41,6 +42,7 @@ const skills = [
 export default function Home() {
   return (
     <main>
+      <RevealOnScroll />
       <nav className="topbar" aria-label="เมนูหลัก">
         <a className="brand" href="#top">KC<span>.</span></a>
         <div className="navlinks">
@@ -54,7 +56,7 @@ export default function Home() {
         <div className="hero-orbit" aria-hidden="true"><span>KC</span></div>
         <div className="hero-copy">
           <p className="eyebrow">PORTFOLIO · 2026</p>
-          <h1>Kanjanawan<br/><em>Chaophichit</em></h1>
+          <h1><span>Kanjanawan</span><br/><em>Chaophichit</em></h1>
           <p className="hero-role">Administrator <span>/</span> Accounting <span>/</span><br/> Supply Chain Coordinator</p>
         </div>
         <div className="hero-bottom">
@@ -65,13 +67,13 @@ export default function Home() {
       </section>
 
       <section className="profile section" id="profile">
-        <header className="section-head reveal"><span>01 / PROFILE</span><h2>เปลี่ยนความซับซ้อน<br/>ให้เป็นระบบที่<em>ลงตัว</em></h2></header>
+        <header className="section-head reveal reveal-left"><span>01 / PROFILE</span><h2>เปลี่ยนความซับซ้อน<br/>ให้เป็นระบบที่<em>ลงตัว</em></h2></header>
         <div className="profile-grid">
-          <figure className="portrait-card reveal">
+          <figure className="portrait-card reveal reveal-left">
             <Image src="/images/profile.jpg" alt="Kanjanawan Chaophichit" fill sizes="(max-width: 850px) 90vw, 32vw" priority />
             <figcaption><span>KANJANAWAN<br/>CHAOPHICHIT</span><b>PROFILE</b></figcaption>
           </figure>
-          <div className="profile-copy reveal">
+          <div className="profile-copy reveal reveal-right">
             <p className="lead">มีประสบการณ์ด้านการบริหารร้าน งานธุรการ บัญชีเบื้องต้น การจัดซื้อ และดูแลสต๊อก</p>
             <p>สามารถประสานงาน จัดทำเอกสาร และติดตามงานได้ดี เป็นคนละเอียดรอบคอบ รับผิดชอบ แก้ไขปัญหาเฉพาะหน้าได้ และพร้อมเรียนรู้สิ่งใหม่อยู่เสมอ</p>
             <div className="values"><div><strong>6+</strong><span>ปีแห่งประสบการณ์</span></div><div><strong>3.88</strong><span>เกรดเฉลี่ยล่าสุด</span></div><div><strong>∞</strong><span>พร้อมเรียนรู้เสมอ</span></div></div>
@@ -80,13 +82,13 @@ export default function Home() {
       </section>
 
       <section className="experience section dark" id="experience">
-        <header className="section-head light reveal"><span>02 / EXPERIENCE</span><h2>ประสบการณ์<br/><em>การทำงาน</em></h2></header>
+        <header className="section-head light reveal reveal-right"><span>02 / EXPERIENCE</span><h2>ประสบการณ์<br/><em>การทำงาน</em></h2></header>
         <div className="timeline">
-          <article className="job reveal">
+          <article className="job reveal reveal-left">
             <div className="job-meta"><span className="year">2567 — ปัจจุบัน</span><span className="number">01</span></div>
             <div className="job-main"><p className="company">บริษัท เคเอ็มที จำกัด</p><h3>หัวหน้าฝ่ายการจัดการ</h3><p className="job-en">Administrator / Accounting &amp; Supply Chain Coordinator</p><ul>{kmtDuties.map((d) => <li key={d}>{d}</li>)}</ul></div>
           </article>
-          <article className="job reveal">
+          <article className="job reveal reveal-right">
             <div className="job-meta"><span className="year">2563 — 2567</span><span className="number">02</span></div>
             <div className="job-main"><p className="company">บริษัท คนตัวเล็ก จำกัด</p><h3>ผู้จัดการร้าน Café Amazon</h3><ul>{cafeDuties.map((d) => <li key={d}>{d}</li>)}</ul>
               <div className="experience-gallery">
@@ -99,26 +101,26 @@ export default function Home() {
       </section>
 
       <section className="education section" id="education">
-        <header className="section-head reveal"><span>03 / EDUCATION</span><h2>รากฐานของ<br/><em>การเติบโต</em></h2></header>
+        <header className="section-head reveal reveal-left"><span>03 / EDUCATION</span><h2>รากฐานของ<br/><em>การเติบโต</em></h2></header>
         <div className="edu-list">
-          <article className="edu reveal"><span className="edu-year">2566 — 2568</span><div><p>มหาวิทยาลัยธนบุรี</p><h3>บริหารธุรกิจบัณฑิต</h3><span>สาขาวิชาการตลาด</span></div><strong>3.88<small>/4 GPA</small></strong></article>
-          <article className="edu reveal"><span className="edu-year">2564 — 2565</span><div><p>วิทยาลัยเทคโนโลยีสยาม (สยามเทค)</p></div><strong>3.88<small>/4 GPA</small></strong></article>
-          <article className="edu reveal"><span className="edu-year">2559 — 2561</span><div><p>โรงเรียนเทพศิรินทร์ นนทบุรี</p><h3>แผนการเรียน อังกฤษ — คณิตศาสตร์</h3></div><strong>3.56<small>/4 GPA</small></strong></article>
+          <article className="edu reveal reveal-right"><span className="edu-year">2566 — 2568</span><div><p>มหาวิทยาลัยธนบุรี</p><h3>บริหารธุรกิจบัณฑิต</h3><span>สาขาวิชาการตลาด</span></div><strong>3.88<small>/4 GPA</small></strong></article>
+          <article className="edu reveal reveal-left"><span className="edu-year">2564 — 2565</span><div><p>วิทยาลัยเทคโนโลยีสยาม (สยามเทค)</p></div><strong>3.88<small>/4 GPA</small></strong></article>
+          <article className="edu reveal reveal-right"><span className="edu-year">2559 — 2561</span><div><p>โรงเรียนเทพศิรินทร์ นนทบุรี</p><h3>แผนการเรียน อังกฤษ — คณิตศาสตร์</h3></div><strong>3.56<small>/4 GPA</small></strong></article>
         </div>
       </section>
 
       <section className="skills section dark" id="skills">
-        <header className="section-head light reveal"><span>04 / EXPERTISE</span><h2>ทักษะที่พร้อม<br/><em>ขับเคลื่อนงาน</em></h2></header>
-        <div className="skill-cloud reveal">{skills.map((s, i) => <span className={i < 3 ? "featured" : ""} key={s}>{s}</span>)}</div>
-        <div className="skill-footer reveal">
+        <header className="section-head light reveal reveal-right"><span>04 / EXPERTISE</span><h2>ทักษะที่พร้อม<br/><em>ขับเคลื่อนงาน</em></h2></header>
+        <div className="skill-cloud reveal reveal-left">{skills.map((s, i) => <span className={i < 3 ? "featured" : ""} key={s}>{s}</span>)}</div>
+        <div className="skill-footer reveal reveal-right">
           <div><span>LANGUAGES</span><p>ไทย <b>● ● ● ● ●</b></p><p>อังกฤษ <b>● ● ● ○ ○</b></p></div>
           <p>สื่อสารภาษาอังกฤษได้ พร้อมเรียนรู้<br/>และพัฒนาทักษะอยู่ตลอดเวลา</p>
         </div>
       </section>
 
       <section className="training section">
-        <header className="section-head reveal"><span>05 / TRAINING</span><h2>เรียนรู้<br/><em>อย่างต่อเนื่อง</em></h2></header>
-        <div className="training-list reveal"><div><span>01</span><p>หลักสูตรการบริหารร้านกาแฟ Café Amazon</p><small>ตามมาตรฐาน บริษัท ปตท. น้ำมันและการค้าปลีก จำกัด</small></div><div><span>02</span><p>การใช้งาน SMEMOVE ขั้นพื้นฐาน</p></div></div>
+        <header className="section-head reveal reveal-left"><span>05 / TRAINING</span><h2>เรียนรู้<br/><em>อย่างต่อเนื่อง</em></h2></header>
+        <div className="training-list reveal reveal-right"><div><span>01</span><p>หลักสูตรการบริหารร้านกาแฟ Café Amazon</p><small>ตามมาตรฐาน บริษัท ปตท. น้ำมันและการค้าปลีก จำกัด</small></div><div><span>02</span><p>การใช้งาน SMEMOVE ขั้นพื้นฐาน</p></div></div>
       </section>
 
       <footer id="contact">

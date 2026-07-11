@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Thai, Cormorant_Garamond } from "next/font/google";
+import { Anuphan, Manrope } from "next/font/google";
 import "./globals.css";
 
-const thai = Noto_Sans_Thai({ variable: "--font-thai", subsets: ["thai", "latin"], display: "swap" });
-const display = Cormorant_Garamond({ variable: "--font-display", subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
+const thai = Anuphan({
+  variable: "--font-thai",
+  subsets: ["thai", "latin"],
+  weight: "variable",
+  display: "swap",
+});
+
+const display = Manrope({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: "variable",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Kanjanawan Chaophichit | Resume",
